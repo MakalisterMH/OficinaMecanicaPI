@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veículos</title>
+
+</head>
+<body>
+  <div class="main">
+    <div class="iconeVoltar">
+      <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="Voltar">
+      <h1 class="title">VEÍCULOS</h1>
+    </div>
+
+    <div class="container card-container" *ngFor="let placa of listaPlacas">
+      <div class="card">
+        <div class="card-body">
+          <!-- Colunas com informações do veículo -->
+          <div class="column">
+            <!-- Informações do veículo -->
+            <p><strong>Placa:</strong> {{ placa }}</p>
+            <p><strong>Tipo Revisão:</strong> {{ revisoesDetalhadas[placa]?.tipoRevisao || 'Não encontrado' }}</p>
+            <p><strong>Detalhes Revisão:</strong> {{ revisoesDetalhadas[placa]?.detalhesRevisao || 'Não encontrado' }}</p>
+            <p><strong>Orçamento:</strong> {{ revisoesDetalhadas[placa]?.orcamento || 'Não encontrado' }}</p>
+          </div>
+
+          <!-- Coluna com informações do cliente -->
+          <div class="column">
+            <!-- Informações do cliente -->
+            <p><strong>Nome Cliente:</strong> {{ revisoesDetalhadas[placa]?.nomeCliente || 'Não encontrado' }}</p>
+            <p><strong>CPF Cliente:</strong> {{ revisoesDetalhadas[placa]?.cpfCliente || 'Não encontrado' }}</p>
+            <p><strong>Telefone Cliente:</strong> {{ revisoesDetalhadas[placa]?.telefoneCliente || 'Não encontrado' }}</p>
+            <p><strong>Email Cliente:</strong> {{ revisoesDetalhadas[placa]?.emailCliente || 'Não encontrado' }}</p>
+          </div>
+
+          <!-- Coluna com informações do veículo -->
+          <div class="column">
+            <!-- Informações do veículo -->
+            <p><strong>Marca Veículo:</strong> {{ revisoesDetalhadas[placa]?.marcaVeiculo || 'Não encontrado' }}</p>
+            <p><strong>Modelo Veículo:</strong> {{ revisoesDetalhadas[placa]?.modeloVeiculo || 'Não encontrado' }}</p>
+            <p><strong>Ano Veículo:</strong> {{ revisoesDetalhadas[placa]?.anoVeiculo || 'Não encontrado' }}</p>
+          </div>
+
+          <!-- Ações -->
+          <div class="actions">
+            <!-- Dropdown para selecionar status -->
+            <div>          
+              <select style="background-color: rgb(238, 238, 0);" class="custom-select" onchange="this.style.backgroundColor = this.value === 'Aguardando' ? 'rgb(255, 230, 0)' : this.value === 'Andamento' ? 'rgb(255, 165, 0)' : 'rgb(0, 124, 173)'">
+                <option value="Aguardando">Aguardando</option>
+                <option value="Andamento">Andamento</option>
+                <option value="Concluido">Concluído</option>
+              </select>
+            </div>
+
+            <!-- Botões de ação -->
+            <div>
+              <button style="background-color: green;">MENSAGEM</button>
+            </div>
+    
+            <div>
+              <button style="background-color: rgb(250, 0, 0);">DETALHES</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

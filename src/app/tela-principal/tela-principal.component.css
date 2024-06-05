@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:host {
+    font-family: 'Roboto', sans-serif;
+  }
+
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+  }
+  
+  .botao {
+    flex: 0 1 calc(25%); /* Divide igualmente a largura dos botões por linha */
+    background-color: #ffffff;
+    width: 240px;
+    height: 280px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 15px; /* Adiciona margem entre os botões */
+  }
+  
+  .icone {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    transition: transform 0.3s; /* Adiciona uma transição suave ao redimensionar o ícone */
+  }
+
+  .botao:hover {
+    transform: scale(1.1);
+    border: 3px solid #ff0000;
+    opacity: 0.8; /* Aumenta o tamanho do card em 10% ao passar o mouse sobre ele */
+    cursor: pointer; /* Transforma o cursor em uma mãozinha */
+  }
+
+  
+  h1 {
+    color: #000080;
+    margin: 2; /* Remove margem padrão do h1 */
+  }
+
+
+/* Estilos para telas maiores que 800px */
+@media (min-width: 700px) {
+    .mobile {
+      display: none; /* Esconde a div com classe "mobile" */
+    }
+  }
+  
+  /* Estilos para telas menores que 800px */
+  @media (max-width: 699px) {
+
+    .principal{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  
+  

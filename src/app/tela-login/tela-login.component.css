@@ -1,0 +1,105 @@
+/* app.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:host {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos específicos do componente */
+.main {
+  width: 100%;
+  background-color: #000080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.texto {
+  width: 45%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.login {
+  width: 50%; /* Alterado para 80% */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.login input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(236, 236, 236);
+  border: 2px solid #000080;
+}
+
+.login button {
+  padding: 10px 20px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 80);
+  cursor: pointer;
+  font-size: 16px;
+  height: 7vh; /* Mantido da sua versão */
+  background-color: #000080; /* Mantido da sua versão */
+  font-size: 25px; /* Mantido da sua versão */
+  color: #ffffff; /* Mantido da sua versão */
+}
+
+.login button:hover {
+  opacity: 0.8;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+
+/* Media query para telas menores que 500px */
+@media (max-width: 500px) {
+
+
+    .login {
+        width: 90%; /* Alterado para 80% */
+        }
+
+
+  .main {
+    display: flex;
+    flex-direction: column;  
+    justify-content: start;
+  }
+
+  .texto p {
+    display: none;
+  }
+
+  .texto {
+    width: 80%;
+  }   
+
+  .login-container {
+    display: block; /* Mostrar o container de login */
+  }
+}

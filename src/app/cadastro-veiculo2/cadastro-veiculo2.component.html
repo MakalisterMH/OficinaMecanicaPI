@@ -1,0 +1,29 @@
+<div class="main">
+
+    <div class="formulario">
+
+        <div class="iconeVoltar">
+
+            <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+            <h1>CADASTRO DE VEICULO</h1>
+
+
+
+        </div>
+
+
+        <input [(ngModel)]="veiculo.cpf" type="text" placeholder="CPF">
+
+        <input [(ngModel)]="veiculo.placa" type="text" placeholder="PLACA VEICULO">
+
+        <button style="background-color: #9B0025;">BUSCAR</button>
+
+        <input [(ngModel)]="veiculo.marca" type="text" placeholder="MARCA">
+        <input [(ngModel)]="veiculo.modelo" type="text" placeholder="MODELO">
+        <input [(ngModel)]="veiculo.ano" type="text" placeholder="ANO">
+
+        <button (click)="cadastrarVeiculo()">AVANÇAR</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="main">
+
+    <div class="formulario">
+
+        <div class="iconeVoltar">
+
+            <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+            <h1>ENDEREÇO</h1>
+
+        </div>
+
+        <input [(ngModel)]="endereco.cep" (click)="buscarCep()" type="text" placeholder="CEP">
+
+        <button (click)="buscarCep()" style="background-color: #9B0025;">BUSCAR</button>
+
+        <input [(ngModel)]="endereco.logradouro" type="text" placeholder="LOGRADOURO">
+        <input [(ngModel)]="endereco.bairro" type="text" placeholder="BAIRRO">
+        <input [(ngModel)]="endereco.localidade" type="text" placeholder="LOCALIDADE">
+        <input [(ngModel)]="endereco.uf" type="text" placeholder="UF">
+
+        <button (click)="cadastrarEndereco()" >AVANÇAR</button>
+
+    </div>
+
+</div>

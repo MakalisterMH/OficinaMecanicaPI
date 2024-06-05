@@ -1,0 +1,29 @@
+<div class="main">
+
+    <div class="formulario">
+
+        <div class="iconeVoltar">
+
+            <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+            <h1>CADASTRO DE FUNCIONARIO</h1>
+
+        </div>
+
+        <input [(ngModel)]="funcionario.nome" type="text" placeholder="NOME">
+        <input [(ngModel)]="funcionario.senha" type="text" placeholder="SENHA">
+        <input [(ngModel)]="funcionario.cpf" type="text" placeholder="CPF">
+        <input [(ngModel)]="funcionario.telefone" type="text" placeholder="TELEFONE">
+        <input [(ngModel)]="funcionario.email" type="text" placeholder="EMAIL">
+        <input [(ngModel)]="funcionario.cep" type="text" placeholder="CEP">
+        <input [(ngModel)]="funcionario.logradouro" type="text" placeholder="LOGRADOURO">
+        <input [(ngModel)]="funcionario.bairro" type="text" placeholder="BAIRRO">
+        <input [(ngModel)]="funcionario.localidade" type="text" placeholder="LOCALIDADE">
+        <input [(ngModel)]="funcionario.uf" type="text" placeholder="UF">
+
+        <button (click)="cadastrarFuncionario()" >AVANÇAR</button>
+
+    </div>
+
+</div>
+
+

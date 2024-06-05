@@ -1,0 +1,37 @@
+<div class="main">
+    <div class="iconeVoltar">
+      <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+      <h1
+        style="background-color: #000080; color: #ffffff; width: 50vh; height: 7vh; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+        EDITAR VEICULO</h1>
+    </div>
+
+    <div class="container">
+  
+      <label for="id">Id</label>
+      <input [(ngModel)]="veiculo.id" type="text" id="id" name="id" readonly>
+  
+      <label for="nome">CPF</label>
+      <input [(ngModel)]="veiculo.cpf" type="text" id="nome" name="nome">
+  
+      <label for="telefone">Placa</label>
+      <input [(ngModel)]="veiculo.placa" type="text" id="telefone" name="telefone">
+  
+      <label for="cpf">Marca</label>
+      <input [(ngModel)]="veiculo.marca" type="text" id="cpf" name="cpf">
+  
+      <label for="email">Modelo</label>
+      <input [(ngModel)]="veiculo.modelo" type="text" id="email" name="email">
+  
+      <label for="cep">Ano</label>
+      <input [(ngModel)]="veiculo.ano" type="text" id="cep" name="cep">
+
+      <div style="display: flex; flex-direction: row; justify-content: center;">
+  
+        <button (click)="atualizarVeiculo()" style="width: 20vh; height: 5vh; background-color: #000080; color: white; border-radius: 10px; margin: 10px;"  type="">Salvar</button>
+        <button (click)="entrarExibirClientes()" style="width: 20vh; height: 5vh; background-color: #ff0000; color: white; border-radius: 10px; margin: 10px;"  type="">Cancelar</button>
+  
+      </div>
+  
+    </div>
+  </div>

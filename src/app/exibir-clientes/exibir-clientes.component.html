@@ -1,0 +1,61 @@
+<div class="main">
+  <div class="iconeVoltar">
+    <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+    <h1 style="background-color: #000080; color: #ffffff; width: 50vh; height: 7vh; display: flex; align-items: center; justify-content: center; border-radius: 10px;">CLIENTES</h1>
+  </div>
+
+  <div class="container">
+
+    <input style="width: 50%; height: 35px; margin-bottom: 30px; border: 2px solid #c0c0c0; border-radius: 5px;" type="text" placeholder="Pesquisar por nome..." [(ngModel)]="searchTerm" (input)="filterClientes()">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>CPF</th>
+          <th>Email</th>
+          <th>CEP</th>
+          <th>Logradouro</th>
+          <th>Bairro</th>
+          <th>Localidade</th>
+          <th>UF</th>
+          <th style="border: 0; background-color: white;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of paginatedCliente">
+          <td>{{ cliente.id }}</td>
+          <td>{{ cliente.nome }}</td>
+          <td>{{ cliente.telefone }}</td>
+          <td>{{ cliente.cpf }}</td>
+          <td>{{ cliente.email }}</td>
+          <td>{{ cliente.cep }}</td>
+          <td>{{ cliente.logradouro }}</td>
+          <td>{{ cliente.bairro }}</td>
+          <td>{{ cliente.localidade }}</td>
+          <td>{{ cliente.uf }}</td>
+          <td style="background-color: rgb(255, 255, 255); border: 0;">
+            <button (click)="editarCliente(cliente)" style="background-color: #000080; color: white; height: 4vh; width: 8vh; border-radius: 3px;">Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button (click)="goToFirstPage()" [disabled]="currentPage === 1">Primeira</button>
+      <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">Anterior</button>
+      
+      <button *ngIf="currentPage > (maxPagesToShow / 2) + 1" (click)="loadPage(1)">1</button>
+      <span *ngIf="currentPage > (maxPagesToShow / 2) + 2">......</span>
+      
+      <button *ngFor="let page of displayedPages" (click)="loadPage(page)" [class.active]="page === currentPage">{{ page }}</button>
+      
+      <span *ngIf="currentPage < totalPages - (maxPagesToShow / 2) - 1">......</span>
+      <button *ngIf="currentPage < totalPages - (maxPagesToShow / 2)" (click)="loadPage(totalPages)">{{ totalPages }}</button>
+      
+      <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">Próxima</button>
+      <button (click)="goToLastPage()" [disabled]="currentPage === totalPages">Última</button>
+    </div>
+  </div>
+</div>

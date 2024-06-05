@@ -1,0 +1,48 @@
+<div class="main">
+
+    <div class="formulario">
+
+        <div  class="iconeVoltar">
+
+            <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+            <h1>NOVA REVISÃO</h1>
+
+        </div>
+
+        <input [(ngModel)]="revisao.placa" type="text" placeholder="PLACA DO VEICULO">
+
+        <div class="tipoRevisao">
+
+            <div class="rev">
+                <input [(ngModel)]="revisao.tipoRevisao" type="radio" name="revisao" value="Revisao" Masculino>
+                <p>
+                    REVISÃO
+                </p>
+            </div>
+
+            <div class="def">
+                <input [(ngModel)]="revisao.tipoRevisao" type="radio" name="revisao" value="Defeito" Masculino>
+                <p>
+                    DEFEITO
+                </p>
+            </div>
+
+
+        </div>
+
+
+        <div class="obs">
+
+
+            <textarea [(ngModel)]="revisao.detalhesRevisao"  name="" id="" placeholder="  
+    ESCREVA AQUI AS OBSERVAÇÕES ..."></textarea>
+
+
+
+        </div>
+
+        <button (click)="cadastrarRevisao()">CONFIRMAR</button>
+
+    </div>
+
+</div>

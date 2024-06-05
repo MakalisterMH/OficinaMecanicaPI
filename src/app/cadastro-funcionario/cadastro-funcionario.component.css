@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:host {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.formulario{
+    width: 60%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+
+}
+
+.iconeVoltar {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img:hover{
+    opacity: 0.7;
+    }
+
+img{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border: 3px solid #000080;
+    border-radius: 5px;
+    cursor: pointer; /* Transforma o cursor em uma mãozinha */
+}
+
+input::placeholder{
+    color: #a1a1a1;
+}
+
+
+
+form{
+    width: 100%;
+}
+
+
+input{
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #a1a1a1;
+    font-size: 20px;
+}
+
+h1{
+    margin: 30px;
+    background-color: #000080;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 50vh;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+button{
+    height: 7vh;
+    width: 15vh;
+    margin: 30px;
+    background-color: #006D5A;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+
+button:hover {
+    filter: brightness(60%); /* Reduz o brilho em 90% */
+  }
+
+  
+
+  @media (max-width: 699px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Alinha o conteúdo no início da tela */
+        height: auto; /* Remove a altura fixa para que o conteúdo se ajuste dinamicamente */
+      }
+
+    .formulario{
+        width: 100%;
+    }
+
+    .formulario h1{
+        width: 80%;
+    }
+
+  }

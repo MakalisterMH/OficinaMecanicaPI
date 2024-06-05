@@ -1,0 +1,50 @@
+<div class="main">
+  <div class="iconeVoltar">
+    <img (click)="entrarPrincipal()" src="assets/voltarBtn.png" alt="">
+    <h1
+      style="background-color: #000080; color: #ffffff; width: 50vh; height: 7vh; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+      EDITAR CLIENTE</h1>
+  </div>
+
+  <div class="container">
+
+    <label for="nome">Id</label>
+    <input [(ngModel)]="cliente.id" type="text" id="id" name="id" readonly>
+
+    <label for="nome">Nome</label>
+    <input [(ngModel)]="cliente.nome" type="text" id="nome" name="nome">
+
+    <label for="telefone">Telefone</label>
+    <input [(ngModel)]="cliente.telefone" type="text" id="telefone" name="telefone">
+
+    <label for="cpf">CPF</label>
+    <input [(ngModel)]="cliente.cpf" type="text" id="cpf" name="cpf">
+
+    <label for="email">Email</label>
+    <input [(ngModel)]="cliente.email" type="text" id="email" name="email">
+
+    <label for="cep">CEP</label>
+    <input [(ngModel)]="cliente.cep" type="text" id="cep" name="cep">
+
+    <label for="logradouro">Logradouro</label>
+    <input [(ngModel)]="cliente.logradouro" type="text" id="logradouro" name="logradouro">
+
+    <label for="bairro">Bairro</label>
+    <input [(ngModel)]="cliente.bairro" type="text" id="bairro" name="bairro">
+
+    <label for="localidade">Localidade</label>
+    <input [(ngModel)]="cliente.localidade" type="text" id="localidade" name="localidade">
+
+    <label for="uf">UF</label>
+    <input [(ngModel)]="cliente.uf" type="text" id="uf" name="uf">
+
+
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+
+      <button (click)="atualizarCliente()" style="width: 20vh; height: 5vh; background-color: #000080; color: white; border-radius: 10px; margin: 10px;"  type="">Salvar</button>
+      <button (click)="entrarExibirClientes()" style="width: 20vh; height: 5vh; background-color: #ff0000; color: white; border-radius: 10px; margin: 10px;"  type="">Cancelar</button>
+
+    </div>
+
+  </div>
+</div>
